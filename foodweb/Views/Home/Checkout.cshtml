@@ -1,0 +1,63 @@
+﻿
+@model foodweb.Models.Cart
+@{
+    ViewBag.Title = "Checkout";
+}
+
+
+<style>
+    td {
+        color: #F44C41;
+        font-size:large;
+    }
+
+    input[type=submit] {
+        background-color: #F44C41; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+
+</style>
+
+<h2 style="color: #F44C41;">Order</h2>
+<table>
+
+    
+    
+        <tr>
+            <td>@Model.Food.DishName</td>
+            <td>@Model.Food.Price</td>
+        </tr>
+    <tr>
+        <td>@Model.Food1.DishName</td>
+        <td>@Model.Food1.Price</td>
+    </tr>
+    <tr>
+        <td>@Model.Food2.DishName</td>
+        <td>@Model.Food2.Price</td>
+    </tr>
+    <tr>
+        <td>@Model.Food3.DishName</td>
+        <td>@Model.Food3.Price</td>
+    </tr>
+    <tr>
+        <td>@Model.Food4.DishName</td>
+        <td>@Model.Food4.Price</td>
+    </tr>
+    <tr>
+        <td>@Model.Food5.DishName</td>
+        <td>@Model.Food5.Price</td>
+    </tr>
+    
+</table>
+<h1 style="color: #F44C41;">Total= @Model.total() </h1>
+<input type="submit"   onclick="location.href = ''" name=" add" value="Order Now">
+<input type="submit" onclick="location.href = '/Home/Index/'" name=" add" value="Logout">
